@@ -10,29 +10,41 @@
   <head>
     <title>$Title$</title>
     <style>
+       input[type='text']{
+           width: 80%;
+       }
+       input[type='submit']{
+           cursor: pointer;
+       }
       .container{
-        width: 400px;
-        height: 500px;
+        width: 270px;
+        height: 350px;
         margin:0 auto;
         border: 1px solid #000;
         border-radius: 2px;
       }
-      input[type='text']{
-        width: 75%;
+      .container a{
+          text-decoration: none;
+          cursor: default;
+          color: black;
+          display: block;
       }
+      .container .row{
+          margin:10px;
+      }
+
     </style>
   </head>
   <body>
   <div class="container">
     <form action="display-discount" method="post">
-      Description:
-      <input type="text" name="description"><br>
-      Price:
-      <input type="text" name="listprice"><br>
-      Discount:
-      <input type="text" name="discountpercen"><br>
-      <input type="submit" value="Calculate Discount">
-
+      <a href="#" class="row"> Description:</a>
+        <a href="#" class="row"><input type="text" name="description"></a>
+        <a href="#" class="row">Price:</a>
+        <a href="#" class="row"><input type="text" name="listprice"></a>
+        <a href="#" class="row">Discount:</a>
+        <a href="#" class="row"><input type="text" name="discountpercen"></a>
+        <a href="#" class="row"><input type="submit" value="Calculate Discount"></a>
     </form>
   </div>
   $END$
